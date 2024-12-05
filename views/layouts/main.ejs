@@ -44,9 +44,15 @@
             <div class="contenido-principal">
         <%- body %>
             </div>
+        <% if ( showCofre === false) { %>
             <div class="diseño-llamativo">
-        <%- include('../partials/diseño.ejs') %>
+                <%- include('../partials/diseño.ejs') %>
+                    </div>
+        <% } else { %>
+            <div class="diseño-llamativo">
+                <%- include('../partials/diseñoCofre.ejs') %>
             </div>
+        <% } %>
         </div>
         <%- include('../partials/footer.ejs') %>
     </main>

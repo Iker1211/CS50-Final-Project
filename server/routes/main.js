@@ -29,7 +29,9 @@ router.get('', async (req, res) => {
           data,
           current: page,
           nextPage: hasNextPage ? nextPage : null,
-          showSidebar: true });
+          showSidebar: true,
+          showCofre: false
+     });
    } catch (error) {
      console.log(error);
    }
@@ -58,8 +60,10 @@ router.post('/search', async (req, res) => {
           res.render("search", {
                data,
                locals,
-               showSidebar: true
+               showSidebar: true,
+               showCofre: true
           });
+
      } catch (error) {
           console.log(error);
      }
