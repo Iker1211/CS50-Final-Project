@@ -81,12 +81,26 @@ router.get('/about', (req, res) => {
 
     res.render('about', { 
      locals,
-     data,
      currentRoute: '/about',
      showSidebar: true,
      showCofre: false,
      showAdminDragon: false,});
 });
+
+// Referencias //
+router.get('/referencias', (req, res) => {
+     const locals = {
+          title: 'Referencias Page',
+          description: 'This is the referencias page of the 42 Blog',
+      }
+  
+      res.render('referencias', { 
+       locals,
+       currentRoute: '/referencias',
+       showSidebar: true,
+       showCofre: false,
+       showAdminDragon: false,});
+ });
 
 //This is true if login and registration form are false
 let showSidebar = true;
