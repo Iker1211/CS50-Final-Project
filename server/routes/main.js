@@ -27,6 +27,7 @@ router.get('', async (req, res) => {
      res.render('index', { 
           locals,
           data,
+          currentRoute: '/',
           current: page,
           nextPage: hasNextPage ? nextPage : null,
           showSidebar: true,
@@ -61,6 +62,7 @@ router.post('/search', async (req, res) => {
           res.render("search", {
                data,
                locals,
+               currentRoute: '/search',
                showSidebar: true,
                showCofre: true
           });
@@ -77,7 +79,13 @@ router.get('/about', (req, res) => {
         description: 'This is the about page of the 42 Blog',
     }
 
-    res.render('about', { locals, showSidebar: true });
+    res.render('about', { 
+     locals,
+     data,
+     currentRoute: '/about',
+     showSidebar: true,
+     showCofre: false,
+     showAdminDragon: false,});
 });
 
 //This is true if login and registration form are false
@@ -118,6 +126,7 @@ router.get('/post/:id', async (req, res) => {
           res.render('post', { 
                locals,
                data,
+               currentRoute: `/post/${slug}`,
                showSidebar: true,
                showCofre: false});
      } catch (error) {

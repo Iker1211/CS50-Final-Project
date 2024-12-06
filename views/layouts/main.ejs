@@ -10,18 +10,12 @@
     <script src="https://kit.fontawesome.com/42fb966e77.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="container">
+<div id="container" class="<%= showSidebar ? '' : 'no-sidebar' %>">
     <% if (showSidebar) { %>
         <div id="sidebar">
             <div>
                 <div>
                     <h1>Aquí va un diseño épico</h1>
-                </div>
-                <div class="header__button">
-                    <button class="searchBtn" aria-expanded="false">
-                        Buscar
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
                 </div>
                 <div class="social-media">
                     <i class="fa-brands fa-youtube"></i>
@@ -30,9 +24,12 @@
                 </div>
                 <div>
                     <ul>
-                        <li>Blog</li>
-                        <li>Declaración</li>
-                        <li>Referencias</li>
+                        <li>
+                            <a href="/about" class="<%= isActiveRoute('/about', currentRoute) %>">About</a>
+                        </li>
+                        <li>
+                            <a href="/referencias" class="<%= isActiveRoute('/referencias', currentRoute) %>">Referencias</a>
+                        </li>
                     </ul>
                 </div>
             </div>
