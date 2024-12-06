@@ -30,7 +30,8 @@ router.get('', async (req, res) => {
           current: page,
           nextPage: hasNextPage ? nextPage : null,
           showSidebar: true,
-          showCofre: false
+          showCofre: false,
+          showAdminDragon: false,
      });
    } catch (error) {
      console.log(error);
@@ -114,7 +115,11 @@ router.get('/post/:id', async (req, res) => {
                description: 'This is the post page of the 42 Blog',
           }
 
-          res.render('post', { locals, data, showSidebar: true });
+          res.render('post', { 
+               locals,
+               data,
+               showSidebar: true,
+               showCofre: false});
      } catch (error) {
           console.log(error);
      }
