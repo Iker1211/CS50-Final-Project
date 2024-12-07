@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" defer src="/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/42fb966e77.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="container" class="admin-page <%= showSidebar ? '' : 'no-sidebar' %>>
+    <% if (showSidebar) { %>
+        <div id="sidebar">
+            <div>
+                <div>
+                    <h1>Aquí va un diseño épico</h1>
+                </div>
+                <div class="header__button">
+                    <button class="searchBtn" aria-expanded="false">
+                        Buscar
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="social-media">
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-goodreads"></i>
+                </div>
+                <div>
+                    <ul>
+                        <li>Blog</li>
+                        <li>Declaración</li>
+                        <li>Referencias</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <% } %>
+    <main class="main">
+        <%- include('../partials/header__admin.ejs') %>
+        <div class="contenedor__design">
+            <div class="contenido-principal">
+        <%- body %>
+            </div>
+        <% if ( showCofre === false && showAdminDragon) { %>
+            <div class="diseño-llamativo">
+                <%- include('../partials/diseñoAdmin.ejs') %>
+                    </div>
+        <% } else if (showCofre) { %>
+            <div class="diseño-llamativo">
+                <%- include('../partials/diseñoCofre.ejs') %>
+                    </div>
+        <% } else { %>
+            <div class="diseño-llamativo">
+                <%- include('../partials/diseño.ejs') %>
+                    </div>
+        <% } %>
+        </div>
+        <%- include('../partials/footer.ejs') %>
+    </main>
+</div>
+</body>
+</html>
