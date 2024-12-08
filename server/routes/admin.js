@@ -224,7 +224,7 @@ router.get('/add-post', authMiddleware, async (req, res) => {
     }); 
 
     //Ruta de Registro
-router.post('/register', async (req, res) => {
+ router.post('/register', async (req, res) => {
     try {
         const { username, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -242,7 +242,7 @@ router.post('/register', async (req, res) => {
     } catch (error) {
         console.log(error);
     }
-});
+}); 
 
 // Delete - Admin - Delete Post //
 router.delete('/delete-post/:id', authMiddleware, async (req, res) => {
