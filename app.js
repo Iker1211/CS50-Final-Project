@@ -23,12 +23,15 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 
+//Configuración de la sesión
 app.use(session({
-    secret: 'keyboard cat',
+    secret: process.env.JWT_SECRET,
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({ 
-        mongoUrl: process.env.MONGODB_URI }),
+        mongoUrl: process.env.MONGODB_URI,
+        collectionName: 'sessions'
+        }),
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 // 1 día
       }
@@ -36,15 +39,19 @@ app.use(session({
 
 app.use(express.static('public'));
 
-//Template Engine
+//Template Engine EJS
 app.use(expressLayout);
 app.set('layout', 'layouts/main');
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.locals.isActiveRoute = isActiveRoute;
 
 app.use('/', require('./server/routes/main'));
 app.use('/', require('./server/routes/admin'));
+
+//Servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
