@@ -359,7 +359,7 @@ overflow-y: auto;
 
   .navbar-toggler {
     color: var(--yellow); /* Ajusta el color del texto del botón a amarillo */
-    border-radius: 20px;
+    border-radius: 5px;
   }
 
   .navbar-toggler .fas {
