@@ -3,7 +3,9 @@
   --violet: #5A387B;
   --blue: #1A2A3B;
   --white: #FFFFFF;
+  --black: #000000;
   --gray: #696969;
+  --yellow: #FFD700; /* Color amarillo brillante */
   --line-height: 1.6;
   --font-size-base: 1rem;
   --font-size-md: clamp(0.625rem, 0.305vw + 0.55rem, 0.79rem); /* Half of the original values */
@@ -183,6 +185,11 @@ textarea {
     overflow-y: auto; /* Enable vertical scroll */
 }
 
+/* Sidebar button */
+.bg-body-tertiary {
+  display: none;
+}
+
 /* Responsive Font */
 h1 { font-size: var(--font-size-xl); 
 line-height: 0.8;
@@ -341,6 +348,26 @@ overflow-y: auto;
 
   #sidebar {
       display: none;
+  }
+
+  .bg-body-tertiary {
+    display: block;
+    position: fixed;
+    margin: 8px;
+    color: var(--yellow);
+  }
+
+  .navbar-toggler {
+    color: var(--yellow); /* Ajusta el color del texto del botón a amarillo */
+    border-radius: 20px;
+  }
+
+  .navbar-toggler .fas {
+    color: var(--yellow); /* Ajusta el color del ícono a amarillo */
+  }
+
+  .fas.fa-bars {
+    color: var(--black); /* Ajusta el color del ícono a amarillo */
   }
 
   main.main {
