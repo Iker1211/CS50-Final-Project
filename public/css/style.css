@@ -361,8 +361,8 @@ overflow-y: auto;
     color: var(--yellow); /* Ajusta el color del texto del botón a amarillo */
     border-radius: 5px;
     box-sizing: border-box; /* Asegúrate de que el box-sizing sea border-box */
-    width: auto; /* Puedes ajustar el ancho según sea necesario */
-    height: auto; /* Puedes ajustar la altura según sea necesario */
+    width: 27.6719px; /* Puedes ajustar el ancho según sea necesario */
+    height: 27.3125px; /* Puedes ajustar la altura según sea necesario */
   }
 
   .navbar-toggler .fas {
