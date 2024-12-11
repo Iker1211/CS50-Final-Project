@@ -357,7 +357,7 @@ overflow-y: auto;
   }
 
   .navbar-toggler {
-    color: var(--yellow); /* Ajusta el color del texto del botón a amarillo */
+    background-color: var(--yellow); /* Ajusta el color del texto del botón a amarillo */
     border-radius: 20px;
     box-sizing: border-box; /* Asegúrate de que el box-sizing sea border-box */
     width: 27.6719px; /* Puedes ajustar el ancho según sea necesario */
