@@ -190,9 +190,38 @@ textarea {
     overflow-y: auto; /* Enable vertical scroll */
 }
 
+#sidebar ul {
+  color: var(--black); /* Adjust the text color as needed */
+}
+
+#sidebar a {
+  color: var(--black); /* Adjust the text color as needed */
+  text-decoration: none;
+}
+
+#sidebar a:hover {
+  color: var(--gray); /* Adjust the text color as needed */
+}
+
 /* Sidebar button */
 .bg-body-tertiary {
   display: none;
+}
+
+/* Social media icons */
+.fa-youtube {
+  color: #FF0000;
+  font-size: 18px;
+}
+
+.fa-twitter {
+  color: #1DA1F2;
+  font-size: 18px;
+}
+
+.fa-goodreads {
+  color: #372213;
+  font-size: 18px;
 }
 
 /* Responsive Font */
