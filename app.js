@@ -8,7 +8,6 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const mongoose = require('mongoose');
 const uri = process.env.MONGODB_URI;
-
 const connectDB = require('./server/config/db');
 const { isActiveRoute } = require('./server/helpers/routeHelpers');
 
@@ -22,25 +21,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-
-//CSP header
-app.use((req, res, next) => {
-    res.setHeader("Content-Security-Policy", "default-src 'self'; font-src 'self' data: https://www.iker42.blog; style-src 'self' 'unsafe-inline'; script-src 'self' https://kit.fontawesome.com");
-    next();
-});
-
-//MIME types
-app.use(express.static('public', {
-    setHeaders: (res, path) => {
-        if (path.endsWith('.woff')) {
-            res.setHeader('Content-Type', 'application/font-woff');
-        } else if (path.endsWith('.woff2')) {
-            res.setHeader('Content-Type', 'application/font-woff2');
-        } else if (path.endsWith('.ttf')) {
-            res.setHeader('Content-Type', 'application/font-ttf');
-        }
-    }
-}));
 
 //Configuración de la sesión
 app.use(session({
