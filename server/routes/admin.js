@@ -262,4 +262,82 @@ router.get('/logout', (req, res) => {
     res.redirect('/');
 });
 
+//Get Esenciales//
+router.get('/esenciales', authMiddleware, async (req, res) => {
+    try {
+        const locals = {
+            title: 'Esenciales',
+        }
+
+        res.render('esenciales', {
+            locals,
+            layout: adminLayout,
+            showSidebar: false,
+            showCofre: false,
+            showAdminDragon: true,
+        })
+    
+    } catch (error) {
+        console.log(error);
+    }
+    }); 
+
+//Herramientas//
+router.get('/herramientas', authMiddleware, async (req, res) => {
+    try {
+        const locals = {
+            title: 'Herramientas',
+        }
+
+        res.render('herramientas', {
+            locals,
+            layout: adminLayout,
+            showSidebar: false,
+            showCofre: false,
+            showAdminDragon: true,
+        })
+    
+    } catch (error) {
+        console.log(error);
+    }
+    }); 
+//Nuestro modo//
+router.get('/acciones', authMiddleware, async (req, res) => {
+    try {
+        const locals = {
+            title: 'Nuestro Modo',
+        }
+
+        res.render('acciones', {
+            locals,
+            layout: adminLayout,
+            showSidebar: false,
+            showCofre: false,
+            showAdminDragon: true,
+        })
+    
+    } catch (error) {
+        console.log(error);
+    }
+    }); 
+//Reglas y organización//
+router.get('/organizacion', authMiddleware, async (req, res) => {
+    try {
+        const locals = {
+            title: 'Reglas y Organización',
+        }
+
+        res.render('organizacion', {
+            locals,
+            layout: adminLayout,
+            showSidebar: false,
+            showCofre: false,
+            showAdminDragon: true,
+        })
+    
+    } catch (error) {
+        console.log(error);
+    }
+    }); 
+
 module.exports = router;

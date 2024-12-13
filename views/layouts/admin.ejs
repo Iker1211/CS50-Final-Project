@@ -6,10 +6,13 @@
     <title><%= locals.title %></title>
     <meta name="description" content="<%= locals.description %>">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" defer src="/js/script.js"></script>
     <script src="https://kit.fontawesome.com/42fb966e77.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="admin-page">
 <div id="container" class="admin-page <%= showSidebar ? '' : 'no-sidebar' %>>
     <% if (showSidebar) { %>
         <div id="sidebar">
@@ -61,5 +64,11 @@
         <%- include('../partials/footer.ejs') %>
     </main>
 </div>
+    <!-- Include jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" defer src="/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/42fb966e77.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -11,10 +11,11 @@
   --font-size-md: clamp(0.625rem, 0.305vw + 0.55rem, 0.79rem); /* Half of the original values */
   --font-size-lg: clamp(0.975rem, 0.625vw + 0.82rem, 1.32rem); /* Increased by a quarter */
   --font-size-xl: clamp(1.525rem, 1.4875vw + 1.15625rem, 2.34375rem); /* Half of the original values */
+  --font-family: 'Arial', sans-serif;
 }
 
 * { 
-font-family: 'Arial', sans-serif;
+font-family: var(--font-family);
 line-height: 1.6;
 }
 
@@ -22,6 +23,7 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: var(--font-family);
 }
 
 input[type="text"],
@@ -30,7 +32,7 @@ input[type="password"],
 input[type="search"],
 select,
 textarea {
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-family);
   font-size: var(--font-size-base);
   display: block;
   box-sizing: border-box;
@@ -106,6 +108,60 @@ textarea {
   color: #212529;
   background-color: #e0a800;
   border-color: #d39e00;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown-button {
+  background-color: #ffc107; /* Warning color */
+  color: #212529; /* Dark text color */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content .dropdown-item {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content .dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on button hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: Add a divider between dropdown items */
+.dropdown-divider {
+  height: 1px;
+  margin: 8px 0;
+  overflow: hidden;
+  background-color: #e9ecef;
 }
 
 .btn-warning:focus, .btn-warning.focus {
@@ -377,11 +433,11 @@ overflow-y: auto;
 /*Responsive design*/
 @media (max-width: 860px) {
   #container {
-      flex-direction: column;
+      flex-direction: row;
   }
 
   #sidebar {
-      display: none;
+    display: none;
   }
 
   .bg-body-tertiary {
@@ -397,6 +453,7 @@ overflow-y: auto;
     box-sizing: border-box; /* Asegúrate de que el box-sizing sea border-box */
     width: 27.6719px; /* Puedes ajustar el ancho según sea necesario */
     height: 27.3125px; /* Puedes ajustar la altura según sea necesario */
+    cursor: pointer; /* Cambia el cursor a un puntero */
   }
 
   .navbar-toggler .fas {
@@ -427,4 +484,54 @@ overflow-y: auto;
     width: 100px;
     height: auto;
   }
+}
+
+/* Responsive Design Admin Page */
+@media (max-width: 860px) {
+  .admin-page #container {
+    flex-direction: column;
+  }
+}
+
+/* Responsive Design for my sacred sidebar */
+@media (min-width: 860px) {
+  #sidebar {
+    display: block;
+  }
+
+  .btn-close {
+    display: none;
+  }
+}
+
+@media (min-width: 250px) {
+  .btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    color: #000;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-width='2' d='M1 1l14 14M15 1L1 15'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+  }
+  
+  .btn-close:hover {
+    color: #000;
+    text-decoration: none;
+    opacity: 0.75;
+  }
+  
+  .btn-close:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    opacity: 1;
+  }
+  
+  .btn-close:disabled, .btn-close.disabled {
+    pointer-events: none;
+    opacity: 0.25;
+  }
+  
 }
