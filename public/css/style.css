@@ -440,13 +440,14 @@ overflow-y: auto;
     cursor: pointer; /* Cambia el cursor a un puntero */
   }
 
-  .navbar-toggler .fas {
-    color: var(--yellow); /* Ajusta el color del ícono a amarillo */
-  }
-
-  .fas.fa-bars {
-    color: var(--black); /* Ajusta el color del ícono a amarillo */
-  }
+  .navbar-toggler .icon-bars {
+    fill: none; /* Asegúrate de que el relleno esté vacío */
+    stroke: var(--black); /* Ajusta el color del ícono a negro */
+    width: 16px; /* Ajusta el ancho del ícono */
+    height: 16px; /* Ajusta la altura del ícono */
+    margin-left: -2.5px;
+    margin-top: 2.5px;
+}
 
   main.main {
       height: auto; /* Adjust height for mobile view */
