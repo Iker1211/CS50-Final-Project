@@ -478,36 +478,24 @@ overflow-y: auto;
   }
 }
 
-/* Responsive Design for my sacred sidebar */
-@media (min-width: 860px) {
-  #sidebar {
-    display: block;
-  }
-
-  .btn-close {
-    display: none;
-  }
-}
-
-@media (min-width: 250px) {
-  .btn-close {
-    box-sizing: content-box;
-    width: 1.5em; /* Ajusta el ancho del botón */
-    height: 1.5em; /* Ajusta la altura del botón */
-    padding: 0.25em; /* Ajusta el relleno del botón */
-    color: #000; /* Color del ícono */
-    background: transparent; /* Fondo transparente */
-    border: none; /* Sin borde */
-    border-radius: 0.25rem; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor a un puntero */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.5; /* Opacidad inicial */
+.btn-close {
+  box-sizing: content-box;
+  width: 1.5em; /* Ajusta el ancho del botón */
+  height: 1.5em; /* Ajusta la altura del botón */
+  padding: 0.25em; /* Ajusta el relleno del botón */
+  color: #000; /* Color del ícono */
+  background: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  border-radius: 0.25rem; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a un puntero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5; /* Opacidad inicial */
 }
 
 .btn-close:hover {
-    opacity: 0.75; /* Opacidad al pasar el cursor */
+  opacity: 0.75; /* Opacidad al pasar el cursor */
 }
 
 .btn-close:focus {
@@ -520,5 +508,19 @@ overflow-y: auto;
   fill: none; /* Sin relleno */
   stroke: currentColor; /* Color del trazo */
 }
+
+/* Responsive Design for my sacred sidebar */
+@media (min-width: 860px) {
+  #sidebar {
+    display: block;
+  }
+
+  .btn-close {
+    display: none;
+  }
+}
+
+@media (min-width: 250px) {
+  
   
 }
