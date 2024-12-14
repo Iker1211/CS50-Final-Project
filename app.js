@@ -14,6 +14,26 @@ const { isActiveRoute } = require('./server/helpers/routeHelpers');
 const app = express();
 const PORT = process.env.PORT || 5000
 
+
+// Middleware to set the correct MIME types //
+app.use(express.static('public', {
+    setHeaders: (res, path) => {
+        if (path.endsWith('.woff')) {
+            res.setHeader('Content-Type', 'application/font-woff');
+        } else if (path.endsWith('.woff2')) {
+            res.setHeader('Content-Type', 'application/font-woff2');
+        } else if (path.endsWith('.ttf')) {
+            res.setHeader('Content-Type', 'application/font-ttf');
+        }
+    }
+}));
+
+//CSP - Content Security Policy//
+app.use((req, res, next) => {
+    res.setHeader("Content-Security-Policy", "default-src 'self'; font-src 'self' data: https://www.iker42.blog; style-src 'self' 'unsafe-inline'; script-src 'self' https://kit.fontawesome.com");
+    next();
+});
+
 //Connect to DB
 connectDB();
 
