@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 5000
 
 
-// Middleware to set the correct MIME types //
+// Middleware to set the correct MIME types
 app.use(express.static('public', {
     setHeaders: (res, path) => {
         if (path.endsWith('.woff')) {
@@ -30,7 +30,7 @@ app.use(express.static('public', {
 
 //CSP - Content Security Policy//
 app.use((req, res, next) => {
-    res.setHeader("Content-Security-Policy", "default-src 'none'; font-src 'self' data: https://www.iker42.blog; style-src 'self' 'unsafe-inline'; script-src 'self' https://kit.fontawesome.com");
+    res.setHeader("Content-Security-Policy", "default-src 'self'; font-src 'self' data: https://www.iker42.blog; style-src 'self' 'unsafe-inline'; script-src 'self' https://kit.fontawesome.com");
     next();
 });
 
