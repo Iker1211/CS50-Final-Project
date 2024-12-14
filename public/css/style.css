@@ -445,7 +445,7 @@ overflow-y: auto;
     stroke: var(--black); /* Ajusta el color del ícono a negro */
     width: 16px; /* Ajusta el ancho del ícono */
     height: 16px; /* Ajusta la altura del ícono */
-    margin-left: -2.5px;
+    margin-left: -2px;
     margin-top: 2.5px;
 }
 
