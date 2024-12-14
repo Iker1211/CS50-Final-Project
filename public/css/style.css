@@ -264,22 +264,6 @@ textarea {
   display: none;
 }
 
-/* Social media icons */
-.fa-youtube {
-  color: #FF0000;
-  font-size: 18px;
-}
-
-.fa-twitter {
-  color: #1DA1F2;
-  font-size: 18px;
-}
-
-.fa-goodreads {
-  color: #372213;
-  font-size: 18px;
-}
-
 /* Responsive Font */
 h1 { font-size: var(--font-size-xl); 
 line-height: 0.8;
