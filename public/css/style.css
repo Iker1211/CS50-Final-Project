@@ -40,6 +40,10 @@ textarea {
   padding: 0.7rem 0.75rem;
   margin-bottom: 1rem;
 }
+/* Busco un hombre */
+#hiring {
+  text-align: right;
+}
 
 /* Etilos cuando no hay sidebar */
 
