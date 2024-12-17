@@ -1,11 +1,11 @@
 /* General Identity*/
 :root {
-  --violet: #5A387B; /* Probar uno más oscuro */
-  --blue: #1A2A3B;
-  --white: #FFFFFF;
-  --black: #000000;
-  --gray: #696969;
-  --yellow: #FFD700; /* Color amarillo brillante */
+  --violet: #40295E; /* Probar uno más oscuro */
+  --blue: #13222E;
+  --white: #F5F5F5;
+  --black: #1A1A1A;
+  --gray: #5A5A5A;
+  --yellow: #E3C200; /* Color amarillo brillante */
   --line-height: 1.6;
   --font-size-base: 1rem;
   --font-size-md: clamp(0.625rem, 0.305vw + 0.55rem, 0.79rem); /* Half of the original values */
