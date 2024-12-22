@@ -252,6 +252,7 @@ textarea {
 
 #sidebar ul {
   color: var(--black); /* Adjust the text color as needed */
+  list-style: none;
 }
 
 #sidebar a {
