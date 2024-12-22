@@ -5,7 +5,7 @@
   --white: #F5F5F5;
   --black: #1A1A1A;
   --gray: #5A5A5A;
-  --yellow: #E3C200; /* Color amarillo brillante */
+  --yellow: #E3C200; 
   --line-height: 1.6;
   --font-size-base: 1rem;
   --font-size-md: clamp(0.625rem, 0.305vw + 0.55rem, 0.79rem); /* Half of the original values */
