@@ -19,6 +19,10 @@ font-family: var(--font-family);
 line-height: 1.6;
 }
 
+script {
+  display: inline-block;
+}
+
 body, html {
   margin: 0;
   padding: 0;
