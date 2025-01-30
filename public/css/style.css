@@ -19,6 +19,11 @@ font-family: var(--font-family);
 line-height: 1.6;
 }
 
+*::selection {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
 script {
   display: inline-block;
 }
@@ -527,8 +532,4 @@ overflow-y: auto;
   .btn-close {
     display: none;
   }
-}
-
-@media (min-width: 250px) {
-  
 }
